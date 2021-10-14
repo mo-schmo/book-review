@@ -1,11 +1,18 @@
 .light {
-    --theme-color: #f3caca;
-    --theme-page-background: rgb(243, 231, 231);
+    --theme-color: #fff;
     --theme-page-text: #111;
 }
 
 .dark {
-    --theme-color: #0000A8;
-    --theme-page-background: #111;
+    --theme-color: #111;
     --theme-page-text: #FFF;
+}
+
+
+.site-layout .site-layout-background {
+    background: #fff;
+}
+
+[data-theme="dark"] .site-layout .site-layout-background {
+    background: #141414;
 }

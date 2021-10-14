@@ -1,14 +1,19 @@
+import '../stylesheets/Navigation.scss'
 import React, { Component, useState } from 'react';
 import { Layout, Menu, Input } from 'antd';
 import {
   UserOutlined,
   UploadOutlined,
-  VideoCameraOutlined,
+  OrderedListOutlined,
+  CheckSquareFilled
 } from '@ant-design/icons';
 
 const { Header, Content, Footer, Sider } = Layout;
  
 const Navigation = () => {
+    const [theme, setTheme] = useState('light')
+
+
     return (
         <Sider
             style={{
@@ -23,13 +28,13 @@ const Navigation = () => {
             </div>
             <Menu theme="dark" mode="inline" defaultSelectedKeys={['4']}>
             <Menu.Item key="1" icon={<UserOutlined />}>
-                nav 1
+                Profile
             </Menu.Item>
-            <Menu.Item key="2" icon={<VideoCameraOutlined />}>
-                nav 2
+            <Menu.Item key="2" icon={<CheckSquareFilled />}>
+                Completed
             </Menu.Item>
-            <Menu.Item key="3" icon={<UploadOutlined />}>
-                nav 3
+            <Menu.Item key="3" icon={<OrderedListOutlined />}>
+                Reading List
             </Menu.Item>
             </Menu>
         </Sider>
