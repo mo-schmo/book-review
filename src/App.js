@@ -2,24 +2,12 @@ import './App.scss';
 import './stylesheets/theme.scss'
 import Navigation from './components/Navigation';
 import {useState} from 'react';
-import { Layout, Menu, Input } from 'antd';
-import {
-  AppstoreOutlined,
-  BarChartOutlined,
-  CloudOutlined,
-  ShopOutlined,
-  TeamOutlined,
-  UserOutlined,
-  UploadOutlined,
-  VideoCameraOutlined,
-  BookOutlined
-} from '@ant-design/icons';
+import { Layout, Input } from 'antd';
 import MyHeader from './components/MyHeader';
 import Main from './components/Main';
 
-const { Header, Content, Footer, Sider } = Layout;
-const { Search } = Input
- 
+const { Footer } = Layout;
+
 
 function App() {
   const [theme, setTheme] = useState('dark')

@@ -7,6 +7,7 @@ import {
   OrderedListOutlined,
   CheckSquareFilled
 } from '@ant-design/icons';
+import { Link } from 'react-router-dom';
 
 const { Header, Content, Footer, Sider } = Layout;
  
@@ -27,15 +28,15 @@ const Navigation = () => {
                 {/* TODO: LOGO */}
             </div>
             <Menu theme="dark" mode="inline" defaultSelectedKeys={['4']}>
-            <Menu.Item key="1" icon={<UserOutlined />}>
-                Profile
-            </Menu.Item>
-            <Menu.Item key="2" icon={<CheckSquareFilled />}>
-                Completed
-            </Menu.Item>
-            <Menu.Item key="3" icon={<OrderedListOutlined />}>
-                Reading List
-            </Menu.Item>
+                <Menu.Item key="1" icon={<UserOutlined />}>
+                    <Link to="/profile">Profile</Link>
+                </Menu.Item>
+                <Menu.Item key="2" icon={<CheckSquareFilled />}>
+                    <Link to="/done">Completed</Link>
+                </Menu.Item>
+                <Menu.Item key="3" icon={<OrderedListOutlined />}>
+                    <Link to="/wish">Reading List</Link>
+                </Menu.Item>
             </Menu>
         </Sider>
     );
