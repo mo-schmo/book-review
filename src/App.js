@@ -15,14 +15,13 @@ function App() {
 
   return (
     <div className="App">
-        <Layout>
-          <Navigation/>
-          <Layout className={`site-layout ${theme}`} style={{ marginLeft: 200 }}>
-            <MyHeader/>
-            <Main/>
-            <Footer style={{ textAlign: 'center' }}>
-            </Footer>
-          </Layout>
+      <Layout style={{minHeight: '100vh'}}>
+        <Navigation/>
+        <Layout style={{ marginLeft: 200 }}>
+          <MyHeader/>
+          <Main/>
+          <MyHeader/>
+        </Layout>
       </Layout>
     </div>
   );

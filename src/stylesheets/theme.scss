@@ -4,15 +4,11 @@
 }
 
 .dark {
-    --theme-color: #111;
+    --theme-color: #102a44;
     --theme-page-text: #FFF;
 }
 
 
 .site-layout .site-layout-background {
     background: #fff;
-}
-
-[data-theme="dark"] .site-layout .site-layout-background {
-    background: #141414;
 }
