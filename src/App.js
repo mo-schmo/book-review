@@ -1,28 +1,17 @@
-import './App.scss';
-import './stylesheets/theme.scss'
-import Navigation from './components/Navigation';
-import {useState} from 'react';
-import { Layout, Input } from 'antd';
-import MyHeader from './components/MyHeader';
+import React from 'react';
 import Main from './components/Main';
-
-const { Footer } = Layout;
-
+import { Landing } from './components/Landing'
+import {Route, Switch} from 'react-router-dom';
+import { ProtectedRoute} from './components/ProtectedRoute';
 
 function App() {
-  const [theme, setTheme] = useState('dark')
-
-
   return (
     <div className="App">
-      <Layout style={{minHeight: '100vh'}}>
-        <Navigation/>
-        <Layout style={{ marginLeft: 200 }}>
-          <MyHeader/>
-          <Main/>
-          <MyHeader/>
-        </Layout>
-      </Layout>
+      <Switch>
+        <Route exact path="/" component={Landing}/>
+        <ProtectedRoute exact path="/main" component={Main}/>
+        <Route path="*" component = {() => "404 Not Found"}></Route>
+      </Switch>
     </div>
   );
 }
